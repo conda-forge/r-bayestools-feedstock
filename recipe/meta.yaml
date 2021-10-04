@@ -1,4 +1,4 @@
-{% set version = '0.1.1' %}
+{% set version = "0.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/BayesTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/BayesTools/BayesTools_{{ version }}.tar.gz
-  sha256: 14a773650bb62fc0ce33f15f54cd5bdc6bc967a84e63c69b02f48f0c8890ae10
+  sha256: 26b26e6f3c74f315f9bf8ea98f2d259665ea1a194999182e363584987a3f9e2e
 
 build:
   ## jags is not available on windows
@@ -47,15 +47,11 @@ test:
 about:
   home: https://fbartos.github.io/BayesTools/
   license: GPL-3.0-only
-  summary: Provides tools for conducting Bayesian analyses. The package contains functions for
-    creating a wide range of prior distribution objects, mixing posterior samples from
-    'JAGS' and 'Stan' models, plotting posterior distributions, and etc... The tools
-    for working with prior distribution span from visualization, generating 'JAGS' and
-    'bridgesampling' syntax to basic functions such as rng, quantile, and distribution
-    functions.
+  summary: Provides tools for conducting Bayesian analyses. The package contains functions for creating a wide range of prior distribution objects, mixing posterior samples from 'JAGS' and 'Stan' models, plotting posterior distributions, and etc... The tools for working with prior distribution span from visualization, generating
+    'JAGS' and 'bridgesampling' syntax to basic functions such as rng, quantile, and distribution functions.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
