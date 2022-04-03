@@ -1,4 +1,4 @@
-{% set version = "0.1.3" %}
+{% set version = "0.2.3" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/BayesTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/BayesTools/BayesTools_{{ version }}.tar.gz
-  sha256: 25214d20e5a1698d76bde30b084d130ab57e105d9c16f0c47a0bec3e07287265
+  sha256: 4c2bd36305b356b1a75549c09de998a339c671f644c8f1e8855dbce0db213bc1
 
 build:
   ## jags is not available on windows
