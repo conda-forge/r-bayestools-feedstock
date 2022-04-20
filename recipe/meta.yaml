@@ -1,4 +1,4 @@
-{% set version = "0.2.3" %}
+{% set version = "0.2.8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,12 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/BayesTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/BayesTools/BayesTools_{{ version }}.tar.gz
-  sha256: 4c2bd36305b356b1a75549c09de998a339c671f644c8f1e8855dbce0db213bc1
+  sha256: dcc6e45e18eecc011a388da1526cebfebaae017efe2ddc7267e9302b07614876
 
 build:
-  ## jags is not available on windows
-  skip: true  # [win]
+  merge_build_host: True  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -26,20 +26,24 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-rdpack
     - r-bridgesampling
     - r-coda
     - r-extradistr
     - r-ggplot2
+    - r-mvtnorm
+    - r-rjags
     - r-runjags
-    - r-rdpack
   run:
     - r-base
+    - r-rdpack
     - r-bridgesampling
     - r-coda
     - r-extradistr
     - r-ggplot2
+    - r-mvtnorm
+    - r-rjags
     - r-runjags
-    - r-rdpack
 
 test:
   commands:
