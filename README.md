@@ -1,11 +1,11 @@
-About r-bayestools
-==================
+About r-bayestools-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bayestools-feedstock/blob/main/LICENSE.txt)
 
 Home: https://fbartos.github.io/BayesTools/
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-bayestools-feedstock/blob/main/LICENSE.txt)
 
 Summary: Provides tools for conducting Bayesian analyses. The package contains functions for creating a wide range of prior distribution objects, mixing posterior samples from 'JAGS' and 'Stan' models, plotting posterior distributions, and etc... The tools for working with prior distribution span from visualization, generating 'JAGS' and 'bridgesampling' syntax to basic functions such as rng, quantile, and distribution functions.
 
