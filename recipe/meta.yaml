@@ -1,4 +1,4 @@
-{% set version = "0.2.15" %}
+{% set version = "0.2.16" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/BayesTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/BayesTools/BayesTools_{{ version }}.tar.gz
-  sha256: 7b31cc9b31c3047d934103402b2c60f56a17ff1b4706b22a0cd662feff9b2b1d
+  sha256: 75d05cd6ccaa81655202c47959ffb01d8b90489c1c85078d0d281211a15fa7d6
 
 build:
   merge_build_host: true  # [win]
