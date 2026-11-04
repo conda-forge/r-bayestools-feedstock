@@ -1,4 +1,4 @@
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/BayesTools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/BayesTools/BayesTools_{{ version }}.tar.gz
-  sha256: cec1c7cf7ad7ec39240ce98c79d427aa6e58e09ec92fe8bad15a218c6bc53942
+  sha256: bd7d7af4455136f67d5fc2c59339b2241ae167ec06050bc5b84c81e57d478dc1
 
 build:
   number: 0
